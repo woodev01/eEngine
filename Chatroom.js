@@ -20,6 +20,10 @@ class Chatroom {
     this.messages.push(message);
   }
 
+  respond(message) {
+    this.broadcast(message);
+  }
+
   broadcast(message) {
     for (let i = 0; i < this.users.length; i++) {
       this.users[i].send(message);

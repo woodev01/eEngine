@@ -10,7 +10,7 @@ class User {
 
   send(message) {
     this.sock.send(message, (err) => {
-      console.log(err);
+      if (err) console.error(err);
       return null;
     });
   }
